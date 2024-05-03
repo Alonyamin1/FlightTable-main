@@ -1,0 +1,394 @@
+/* Body styles */
+body{
+    direction: rtl;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url("./images/backgroundplane.jpeg");
+    background-size: cover;
+}
+
+#maintable{
+    opacity: 90%;
+}
+/* Table for flights */
+.flighttable{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.flighttable table{
+     width: 95%;  
+}
+
+/* Row styles for arrival and departure */
+#maintable tr.A{
+    background-color: lightblue;
+}
+#maintable tr.D{
+    background-color:azure;
+}
+
+/* Hover effect for table rows */
+#maintable tr:hover{
+    background-color: rgb(21, 119, 231) !important;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+/* Hover effect for SVG elements */
+
+.SVGwhite{
+    fill: white !important;
+}
+
+.timedelay{ /* Class denoting time delayed row */
+    color: red;
+    font-weight: bold;
+}
+
+/* Table header styles */
+#maintable th{
+    box-shadow: inset 0 0 7px black;
+    background-color: white;
+    color: black;
+    padding-left: 15px;
+}
+
+/* Hover effect for table headers */
+#maintable th:hover{
+    box-shadow: inset 0 0 7px rgb(41, 134, 255);
+}
+
+/* Button styles within table headers */
+#maintable th button{
+    border: 0px;
+    background:none;
+    color: black;
+    width: 15px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#maintable th button:hover{
+    cursor:pointer;
+}
+
+
+
+/* View selector styles */
+.viewSelector{
+    text-align: left;
+    padding-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* List item styles */
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+/* Popup styles */
+#popup{
+z-index: 99;
+padding-bottom: 10px;
+padding-top: 15px;
+min-width: 80%;
+position: fixed;
+top: 0%;
+left: 12.5%;
+transform: translate(-50%, -100%); 
+background-color: lightskyblue;
+border-radius: 15px;
+}
+
+/* Popup details styles */
+#popupDetails{
+text-align: center;
+display: grid;
+font-weight: bold;
+font-size: x-large;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+
+/* Hover effect for path elements within popup */
+#popup path:hover{
+    cursor: pointer;
+    fill: white;
+}
+
+#popup path{
+    text-align: center;
+    padding: 50%;
+}
+
+.pageSelector{
+    background-color: white;
+    direction: ltr;
+    opacity: 50%;
+    margin: auto;
+    padding-bottom: 1px;
+}
+
+#pageList label{
+    background: none;
+    font-weight: bold;
+    padding: 4px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+/* Hover effect for labels within page list */
+#pageList label:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Radio button styles within page list */
+#pageList input[type="radio"]{
+    display: none;
+}
+
+/* Checked radio button styles within page list */
+#pageList input[type="radio"]:checked + label {
+    background-color: rgb(21, 119, 231);
+    color: white;
+  }
+
+
+
+button>img{
+    height: 32px;
+}
+
+
+#searchBtn{
+    border-radius: 50px;
+}
+
+h2{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: right;
+    width: 97%;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for search button */
+.searchBtn_hover{
+    cursor:pointer;
+    background-color: white;
+}
+
+p{
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+}
+
+/* Input styles within search div */
+#searchDiv input{
+    font-size: 18px;
+}
+
+/* Select styles within search div */
+#searchDiv select{
+    font-size: 18px;
+}
+
+/* Search div styles */
+#searchDiv{ 
+    margin: auto;
+    font-size: large;
+    border-radius: 25px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    row-gap: 50px;
+    background-color: rgb(185, 236, 236);
+    opacity: 90%;
+    direction: ltr;
+    margin-bottom: 20px;
+}
+
+/* Layout of the flightcontainer and searchbutton via grid */
+#search_button{
+    grid-column-start: 2;
+    grid-column-end:3 ;
+}
+
+#flightTypeContainer{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    grid-column-start: 3;
+    grid-column-end:4 ;
+}
+
+
+
+#clearSearch button, .pdflink button{
+    font-size: large;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 3px;
+    background: none;
+}
+
+.pdflink button{
+    color: lightblue;
+}
+
+/* Hover effect for clear search button, flight type container button, search button, and wave button */
+#clearSearch button:hover,.pdflink button:hover, #flightTypeContainer button:hover:not([disabled]), #searchBtn:hover:not([disabled]), #wavebtn:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 7px gray;
+}
+
+#buttonContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+input{
+    direction: rtl;
+}
+
+#search_button>button{
+    height: 70px;
+    width: 70px;
+    margin-top: 8px;
+}
+
+/* Styles of the toggle buttons*/
+
+.yellowBG{
+    background-color: yellow !important;
+}
+
+#flightTypeContainer button:disabled:hover{
+    cursor: not-allowed;
+}
+
+#departures{
+    cursor: pointer;
+    background-color: white ;
+    font-size: large;
+    height: 80px;
+    width: 80px;
+}
+
+
+
+#departures>img{
+    height: 40px;
+}
+#ingoing>img{
+    height: 40px;
+}
+h6{
+    margin:0;
+}
+
+#ingoing{
+    cursor: pointer;
+    background-color: white ;
+    font-size: large;
+    height: 80px;
+    width: 80px;
+}
+
+.container h1{
+    color: white;
+    font-weight: bold;
+}
+
+.dir-right{
+    direction: rtl;
+}
+
+/* Keyframes for animations */
+@keyframes side2side {
+    0% { transform: translateX(30px); }
+    50% { transform: translateX(-30px); }
+    100% { transform: translateX(30px);  }
+  }
+
+  @keyframes rolldown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(-15px); } 
+  }
+
+  @keyframes rollup {
+    from { transform: translateY(-15px); }
+    to { transform: translateY(-100%); } 
+  }
+
+/* Wave button styles */
+  #wavebtn{
+    border-radius: 50%;
+    background-color: rgb(21, 119, 231);
+    border: 1px solid white;
+    font-size:xx-large;
+    min-height: 50px;
+    min-width: 50px;
+    margin-bottom: 10px;
+  }
+
+  #wavebtn:hover{
+    filter: brightness(1.15);
+  }
+  
+#prevnext button{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+#prevnext button:hover{
+    filter: brightness(1.2);
+}
+
+  #next{
+    margin-left: 5px;
+  }
+  
+  #prev{
+    margin-right: 5px;
+  }
+  
+/* Graphs styling*/
+  .GraphDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#graphTitle, .viewsSelector span{
+    direction: rtl;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+
+  .plot-container{
+      opacity: 90%;
+      
+    }
+    
+    .svg-container{
+        margin: auto !important; /* Center horizontally */
+
+  }

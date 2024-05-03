@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ברוכים הבאים לנמל התעופה של אלון וליאור!</h1>
+        <div class="pdflink">
+            <a href="https://proj.ruppin.ac.il/cgroup1/test1/proj/316483346_209894484/additional_functionality.pdf">
+            <button type="button">קישור לPDF</button>
+            </a>
+        </div>
+        <div id="searchDiv">
+            
+                <div class="grid-iem">
+                    <p>מספר טיסה</p>
+                    <input oninput="isValidSearch()" id="flightNum" type="text" placeholder="מספר...">
+                </div>
+                <div class="grid-iem">
+                    <p>עד תאריך</p>
+                    <input type="date" name="" id="to_date" min="2024-03-01" onchange="isValidSearch()">
+                </div>
+                <div class="grid-iem">
+                    <p>מתאריך</p>
+                    <input type="date" name="" id="from_date" min="2024-03-01" onchange="isValidSearch()">
+                </div>
+                
+                <div class="grid-iem">
+                    <p>חברת תעופה</p>
+                    <select name="" id="airline_company" onchange="isValidSearch()"></select>
+                </div>
+                
+                <div class="grid-iem">
+                    <p>שדה תעופה</p>
+                    <select name="" id="airport_search" onchange="isValidSearch()"></select>                    
+                </div>
+
+                <div class="grid-iem">
+                    <p>מדינה</p>
+                    <select name="" id="country_search" onchange="isValidSearch()"></select>  
+                </div>
+                <div id="clearSearch">
+                <button type="button" id="clearSearchBtn" onclick="clearSearch();">נקה חיפוש</button>
+            </div>
+            
+                <div class="buttonContainer" id="search_button">
+                <button type="button" id="searchBtn" onclick="showSearchResults();" disabled="disabled" ><img src="./images/magnifying-glass-search-svgrepo-com.svg" alt=""></button>
+            </div>
+            <div id="flightTypeContainer">
+                <button id="departures" onclick="clicked_btn(this);"><img src="./images/D.svg" alt=""><h6>יוצאות</h6></button>
+                
+                <button id="ingoing" onclick="clicked_btn(this);"><img src="./images/A.svg" alt=""><h6>נכנסות</h6></button>
+            </div>
+            </div>
+            
+        </div>
+        <button type="button" id="wavebtn" onclick="toggleWave()">🌊</button>
+    </div>
+    
+        <div class="viewsSelector">
+            <span>שורות לעמוד: </span>
+            <select name="viewsSelector" id="viewsSelector" onchange="switchPage(1)">
+                <option value="10">10</option>
+                <option value="25" selected>25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+            <div class="flighttable">
+            </div>
+            <div class="pageSelector">
+            </div>
+    </div>
+
+    <div id="GraphDiv">
+        <h1 id="graphTitle">גרפים:</h1>
+        <div id="plot"></div>
+        <div id="pieplot"></div>
+
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./flights.js"></script>
+    <script src="./main.js" defer></script>
+    <script src="./graphs.js" defer></script>
+</body>
+</html>
